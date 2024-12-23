@@ -15,6 +15,8 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
+  padding: 20px; 
+  box-sizing: border-box; 
 }
 
 .form-container {
@@ -25,8 +27,8 @@ body {
   width: 400px;
   max-width: 90%;
   animation: fadeIn 0.8s ease-in-out;
+  box-sizing: border-box; 
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -36,10 +38,10 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  gap: 10px; /* Added gap for better spacing */
 }
-
 .form-toggle button {
-  width: 48%;
+  flex: 1; 
   padding: 12px;
   background-color: #f3f3f3;
   border: none;
@@ -58,6 +60,7 @@ body {
   background-color: #033452;
   color: white;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -68,6 +71,7 @@ body {
   text-align: center;
   color: #033452;
   margin-bottom: 20px;
+  font-size: 1.5rem; 
 }
 
 .form input {
@@ -77,6 +81,7 @@ body {
   font-size: 14px;
   width: 100%;
   transition: border-color 0.3s;
+  box-sizing: border-box; 
 }
 
 .form input:focus {
@@ -109,7 +114,6 @@ body {
 .form button:hover {
   background-color: #0C67A0;
 }
-
 .form p {
   text-align: center;
   font-size: 14px;
@@ -124,3 +128,44 @@ body {
 .form p a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%; 
+    padding: 20px; 
+  }
+
+  .form h2 {
+    font-size: 1.3rem;
+  }
+
+  .form input {
+    font-size: 12px; 
+  }
+
+  .form button {
+    font-size: 14px; 
+    padding: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    border-radius: 10px; 
+    padding: 15px; 
+  }
+
+  .form h2 {
+    font-size: 1.1rem; 
+  }
+
+  .form input, .form button {
+    font-size: 12px; 
+    padding: 8px; 
+  }
+
+  .form-toggle button {
+    font-size: 12px; 
+    padding: 8px; 
+  }
+} 
